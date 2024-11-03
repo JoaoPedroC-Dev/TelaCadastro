@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <title>Mini Projeto</title>
+</head>
+<body>
+    <!-- Cabeçalho da Página de Cadastro -->
+    <header>
+        <h1>Cadastro da Conta</h1>
+    </header>
+    <!--  -->
+    <main>
+        <h2>Preencha todas as informações abaixo:</h2>
+        <section id="pegaInfo">
+            <article id="infoUser">
+                <label>Nome Completo:</label>
+                <input id="nameUser" type="text" placeholder="Digite seu nome completo">
+                <label>Email:</label>
+                <input id="emailUser" type="email" placeholder="Digite seu email">
+                <label>Telefone/Celular:</label>
+                <input id="numberUser" type="text" placeholder="Digite seu número de celular">
+                <label>Idade:</label>
+                <input id="ageUser" type="date">
+            </article>
+            <button id="enviarDados">Enviar</button>
+        </section>
+
+        <section id="response">
+            <h2>Informações Cadastradas</h2>
+            <label>Nome: <span class="span"></span></label>
+            <label>Email: <span class="span"></span></label>
+            <label>Telefone/Celular: <span class="span"></span></label>
+            <label>Idade: <span class="span"></span></label>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
