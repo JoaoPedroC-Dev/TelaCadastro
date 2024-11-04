@@ -41,4 +41,5 @@ main {
 #enviarDados{
     max-width: 10px;
     border: solid black 3px;
+    border-radius: 2px;
 }
