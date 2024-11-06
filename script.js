@@ -3,8 +3,6 @@ const pegaInfo = {
     nome: document.getElementById ("nameUser"),
     email: document.getElementById ("emailUser"),
     number: document.getElementById ("numberUser"),
-    age: document.getElementById ("ageUser"),
-
 }
 
 const exibirResponse = document.getElementById ("response")
@@ -13,29 +11,29 @@ const response = document.querySelectorAll (".span")
 const buttonExcluir = document.getElementById("excluir")
 const buttonEditar = document.getElementById ("editar")
 
+// FUNÇÕES //
+const registros = [];
 
 // CLASSE //
 class User {
-    constructor (nome, email, number, age){
+    constructor (nome, email, number){
         this.nome = nome;
         this.email = email;
         this.number = number;
-        this.age = age;
     }
 
     exibirResponse(){
         response[0].innerText = this.nome;
         response[1].innerText = this.email;
         response[2].innerText = this.number;
-        response[3].innerText = this.age;
     }
 
     apagarResponse(){
-        response[0].innerText = this.nome
-        response[1].innerText = this.email
-        response[2].innerText = this.number
-        response[3].innerText = this.age
+        response[0].innerText = this.nome;
+        response[1].innerText = this.email;
+        response[2].innerText = this.number;
     }
+
 }
 
 // EVENTOS //
@@ -44,20 +42,21 @@ button.addEventListener("click", () => {
         pegaInfo.nome.value,
         pegaInfo.email.value,
         pegaInfo.number.value,
-        pegaInfo.age.value
     );
-    
+  
     newInfo.exibirResponse();
+    exibirResponse.style.display = "flex"
+
 });
 
 buttonExcluir.addEventListener("click", () => {
+
     const cleanInfo = new User (
         pegaInfo.nome.nodeValue,
         pegaInfo.email.nodeValue,
         pegaInfo.number.nodeValue,
-        pegaInfo.age.nodeValue
     );
     
     cleanInfo.apagarResponse();
-});
-
+    exibirResponse.style.display = "none"
+})

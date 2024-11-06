@@ -1,3 +1,4 @@
+/* Regra universal */
 * {
     border: 0;
     margin: 0;
@@ -5,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* Estilização da header */
 header{
     display: flex;
     background-color: black;
@@ -12,6 +14,7 @@ header{
     justify-content: center;
 }
 
+/* Estilização da main */
 main {
     display: flex;
     justify-content: space-around;
@@ -20,11 +23,13 @@ main {
     
 }
 
+/* Posicionamento dos componentes do campo de cadastro */
 #infoUser{
     display: flex;
     flex-direction: column;
 }
 
+/* Estilização do campo de cadastro */
 #pegaInfo{
     display: flex;
     flex-direction: column;
@@ -38,6 +43,7 @@ main {
 
 }
 
+/* Estilização do botão responsável por enviar os dados */
 #enviarDados{
     border: 20px;
     border-radius: 2px;
@@ -45,24 +51,28 @@ main {
     cursor: pointer;
 }
 
+/* Estilização do campo onde será mostrado as informações cadastradas */
 #response {
-    display: flex;
-    flex-direction: column;
+    display: none; 
+    flex-direction: column ;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
+    border: solid black 2px;
     gap: 20px;
-    border: solid 2px;
     border-radius: 10px;
     padding: 2px;
-    margin-top: 20px;
-  }
+    margin-top: 30px;
+}
 
+/* Estilização do botão responsável por excluir as informações */
 #excluir{
     width: 30px;
     font-size: 20px;
     cursor: pointer;
 }
 
+/* Estilização do botão responsável por editar as informações */
 #editar{
     width: 30px;
     font-size: 20px;
